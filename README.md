@@ -1,0 +1,1 @@
+React app that displays books' information using the Google Books API
