@@ -1,5 +1,13 @@
-FROM node:10
+FROM node:10.6.0-alpine
+
+RUN apk --no-cache add git
+RUN npm install -g @storybook/cli
+
 WORKDIR /app
-COPY package.json ./
+
+COPY package.json package-lock.json ./
 RUN npm install
-CMD ["npm", "start"]
+
+ADD . /app
+
+CMD npm start
