@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Title() {
+export default function Title(props) {
   return (
     <AppTitle>
-      Search Books by Title
+      {props.title}
     </AppTitle>
   );
 }

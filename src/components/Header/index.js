@@ -6,7 +6,7 @@ import SearchForm from '../SearchForm';
 export default function Header() {
   return(
     <AppHeader>
-      <Title/>
+      <Title title="Search Books by Title"/>
       <SearchForm />
     </AppHeader>
   );
