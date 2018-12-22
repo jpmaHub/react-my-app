@@ -9,7 +9,7 @@ export default function App () {
   return (
     <AppDiv>
       <Header></Header>
-      <AddBook />
+      <AddBook/>
     </AppDiv>
   );
 }

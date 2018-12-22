@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from '../Title';
-import AddBook from '../AddBook';
-import SearchForm from '../SearchForm';
+import SearchType from '../SearchType';
 
-export default function Header() {
+export default function Header(props) {
   return(
     <AppHeader>
-      <Title title="Search Books by Title"/>
+      <SearchType type={props.type == undefined ? "Search Books by Title" : "Search Books by " + props.type}/>
     </AppHeader>
   );
 }

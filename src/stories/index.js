@@ -1,19 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Title from '../components/Title';
+import SearchType from '../components/SearchType';
 import Header from '../components/Header';
 import SearchForm from '../components/SearchForm';
 import AddBook from '../components/AddBook';
 
-storiesOf('App', module)
-.add('with header',() => (<Header />))
-.add('with AddBook',() => (<AddBook />));
+storiesOf('Search by Title', module)
+.add('with header',() => (<Header type= "Title" />))
+.add('with AddBook',() => (<AddBook type= "Title" />));
 
-storiesOf('Header', module)
-.add('with title', () => (
-  <Title />
-))
-.add('with SearchForm', () => (
-  <SearchForm />
-));
+
+storiesOf('Search by Author', module)
+.add('with header',() => (<Header type= "Author" />))
+.add('with AddBook',() => (<AddBook type= "Author" />));
+
+
 

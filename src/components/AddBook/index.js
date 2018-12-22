@@ -1,7 +1,7 @@
 import React from 'react';
-import Search from 'antd/lib/input/Search';
 import SearchForm from '../SearchForm';
 import ViewBooks from '../ViewBooks';
+
 export default class AddBook extends React.Component {
   constructor(props) {
     super(props);
@@ -46,15 +46,16 @@ render() {
   let cssbookItem = 'book-item';
 
   let bookItems = this.state.Books.map((book, i) => {
-      return <li onClick={this.removebook.bind(this)}
-          className={cssbookItem}
-          key={cssbookItem + i}>{book}</li>;
+      return <div onClick={this.removebook.bind(this)}
+                className={cssbookItem}
+                key={cssbookItem + i}>{book}
+            </div>;
   });
 
   return (
       <div className="Books-list">
-         <SearchForm add={this.handleClick}/>
-         <ViewBooks books={bookItems} />
+        <SearchForm add={this.handleClick} placeText={this.props.type == undefined ? "Search Books by Title" : "Search Books by " + this.props.type}/>
+        <ViewBooks books={bookItems} />
       </div>
   );
 }
