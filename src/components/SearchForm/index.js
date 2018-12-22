@@ -1,18 +1,16 @@
 import React from 'react';
-import { Form, Input, Button } from 'antd';
-import './form.css';
 
-const FormItem = Form.Item;
+export default class SearchForm extends React.Component {
+  render() {
+  return (
+  <div>
+        <input type="text" id="input-add" style={{ height:"20px" , width:"150px"}}/>
+        <button type="primary" id="new-book"
+            onClick={this.props.add} style={{ height:"27px"}} >Add book</button>
+  </div>
 
-export default function SearchForm() {
-  return <Form>
-    <FormItem>
-      <Input style={{ width:"250px"}}/>
-    </FormItem> 
-    <FormItem>
-      <Button htmlType="submit">Search</Button>
-    </FormItem>
-  </Form>
+  )
+  }
 }
 
 
