@@ -4,7 +4,7 @@ export default class ViewBooks extends React.Component {
   render() {
   return (
     <div> 
-      {this.props.books} 
+      {this.props.children} 
     </div> 
   );
   }

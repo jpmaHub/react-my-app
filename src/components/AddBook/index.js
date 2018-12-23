@@ -6,11 +6,12 @@ export default class AddBook extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.addbook.bind(this);
-    let typeBooks = this.props.bookType
+    let typeBooks = this.props.bookType 
+    
     if(this.props.listSearchedBooks === true){
         this.state = {
             Books: [ 
-            typeBooks
+             typeBooks
             ],
             deleted: false
         }
@@ -57,20 +58,28 @@ render() {
   let cssbookItem = 'book-item';
 
   let bookItems = this.state.Books.map((book, i) => {
-      return <div onClick={this.removebook.bind(this)}
+      return <div class="grid-item" onClick={this.removebook.bind(this)}
                 className={cssbookItem}
                 key={cssbookItem + i}>{book}
             </div>;
   });
 
+  let placeText = this.props.type == undefined ? "Search Books by Title" : "Search Books by " + this.props.type;
+  
   return (
       <div className="Books-list">
-        <SearchForm add={this.handleClick} placeText={this.props.type == undefined ? "Search Books by Title" : "Search Books by " + this.props.type}/>
-        <ViewBooks books={bookItems} />
+        <SearchForm>
+            <input type="text" id="input-add" style={{ height:"20px" , width:"150px" }} placeholder={placeText}/>
+            <button type="primary" id="new-book"
+                onClick={this.handleClick} style={{ height:"27px" }} >Add book</button>
+        </SearchForm>
+        
+        <ViewBooks> 
+           <div style={{fontSize:"20px", textAlign:"center"}}>
+              {bookItems}
+           </div>
+        </ViewBooks>
       </div>
   );
 }
 }
-
-
-

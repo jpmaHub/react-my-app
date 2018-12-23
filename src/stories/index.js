@@ -1,8 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import SearchType from '../components/SearchType';
 import Header from '../components/Header';
-import SearchForm from '../components/SearchForm';
 import AddBook from '../components/AddBook';
 
 storiesOf('List most searched title', module)
