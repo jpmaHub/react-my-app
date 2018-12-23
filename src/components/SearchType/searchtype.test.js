@@ -1,5 +1,5 @@
 import { mount } from 'enzyme';
-import SearchType from '../SearchType';
+import SearchType from '.';
 import React from 'react';
 
 describe('Title', () => {

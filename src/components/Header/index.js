@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import SearchType from '../SearchType';
+import Welcome from '../Welcome';
 
 export default function Header(props) {
   return(
     <AppHeader>
-      <SearchType type={props.type == undefined ? "Search Books by Title" : "Search Books by " + props.type}/>
+      <Welcome/>
+      <SearchType type={props.type == undefined ? "Title" : props.type}/>
     </AppHeader>
   );
 }
 
 const AppHeader = styled.header`
-  background-color:grey;
-  height: 50px;
+  background-color:#DFDFDF;
+  height: 70px;
   margin:20px
   padding: 20px;
   text-align: center;

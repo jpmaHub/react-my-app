@@ -58,7 +58,7 @@ render() {
   let cssbookItem = 'book-item';
 
   let bookItems = this.state.Books.map((book, i) => {
-      return <div class="grid-item" onClick={this.removebook.bind(this)}
+      return <div onClick={this.removebook.bind(this)}
                 className={cssbookItem}
                 key={cssbookItem + i}>{book}
             </div>;

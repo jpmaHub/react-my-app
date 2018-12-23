@@ -3,13 +3,12 @@ import styled from 'styled-components';
 
 export default function SearchType(props) {
   return (
-    <AppSearchType>
+    <AppType>
       {props.type}
-    </AppSearchType>
+    </AppType>
   );
 }
 
-const AppSearchType = styled.h1`
-  font-size: 1.5em;
+const AppType = styled.h1`
+  font-size: 1em;
 `;
-
