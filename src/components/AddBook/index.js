@@ -6,11 +6,22 @@ export default class AddBook extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.addbook.bind(this);
+    let typeBooks = this.props.bookType
+    if(this.props.listSearchedBooks === true){
+        this.state = {
+            Books: [ 
+            typeBooks
+            ],
+            deleted: false
+        }
+    }
+    else{
     this.state = {
         Books: [
         ],
         deleted: false
     }
+}
 }
 
 addbook(event) {
