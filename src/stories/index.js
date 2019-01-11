@@ -29,3 +29,9 @@ bookType = {[
 storiesOf('Search by Author', module)
 .add('with header',() => (<Header type= "Author" />))
 .add('with AddBook',() => (<AddBook type= "Author" />));
+
+storiesOf('By Default', module)
+.add('with header',() => (<Header/>))
+.add('with AddBook',() => (<AddBook/>));
+
+
